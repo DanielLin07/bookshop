@@ -40,7 +40,7 @@
         <ul class="book-lists">
             <c:forEach items="${books}" var="book" varStatus="bookStatus">
             <li class="book-list">
-                <a href="#" class="book-pic">
+                <a href="bookDetail.do?id=${book.getId()}" class="book-pic">
                     <img src="<%=request.getContextPath()%>/img/book-list/article/${book.getBookImage().getId()}.jpg">
                 </a>
                 <a href="#" class="book-info">

@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="mybookshop:war2">
+    <output-path>$PROJECT_DIR$/out/artifacts/mybookshop_war2</output-path>
+    <root id="archive" name="mybookshop_war.war">
+      <element id="artifact" artifact-name="mybookshop:war exploded" />
+      <element id="dir-copy" path="$PROJECT_DIR$/src/main/webapp" />
+    </root>
+  </artifact>
+</component>
