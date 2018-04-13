@@ -1,0 +1,106 @@
+
+body {
+	background-image: url(../img/login2.jpg);
+
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: auto;
+}
+
+#login-container{
+	width: 450px;
+	height: 320px;
+	background-color: white;
+	border-radius: 5px;
+    margin-top: 10%;
+    margin-left: 33%; 
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-content: center;
+	position: relative;
+}
+
+#login-container h2{
+	font-family: sans-serif;
+	font-weight: 600;
+	color: #1994cc;
+	order: 0;
+	margin-top: 30px;
+	margin-left: 26%;
+	/*align-self: 50%;*/
+	/*flex-basis: 60%;*/
+	flex-flow: 1;
+}
+
+.userName{
+	height: 40px;
+	width: 280px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	text-indent: 10px;
+	font-size: 15px;
+	flex-flow: 1;
+	margin-top: 5px;
+	margin-left: 19%;
+	/*flex-basis: 50%;*/
+	/*align-self: 50%;*/
+}
+
+.password{
+	height: 40px;
+	width: 280px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	text-indent: 10px;	
+	margin-top: 20px;
+	margin-left: 19%;
+	flex-flow: 1;
+	/*flex-basis: 50%;*/
+}
+
+.forgetPass{
+	text-decoration: none;
+	color:#0a7eb3;
+	font-size: 12px;
+	position: absolute;
+	right: 80px;
+
+}
+
+#errorInfo{
+	color:red;
+	font-size: 12px;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.loginBtn{
+	position: relative;
+	height: 40px;
+	width: 279px;
+	border-radius: 5px;
+	border: none;
+	text-indent: -10px;		
+	background-color: #1ea1dc;
+	color: white;
+	font-size: 16px;
+	margin-top: 20px;
+	margin-left: 19%;
+	/*flex-basis: 50%;*/
+}
+
+.loginBtn a{
+	color: white;
+	text-decoration: none;
+}
+
+.loginBtn .loading{
+	margin-top: -5px;
+	position: absolute;
+	right: 10px;
+
+}
+

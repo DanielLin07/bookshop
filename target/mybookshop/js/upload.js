@@ -1,0 +1,11 @@
+$(function(){
+    //点击关闭图标关闭模态窗口
+    $(function(event){
+        $(".modal-close").on("click",function(){
+            $("#modal-dialog").hide();
+        });
+        $(".modal-close-icon").on("click",function(){
+            $("#modal-dialog").hide();
+        });
+    });
+});

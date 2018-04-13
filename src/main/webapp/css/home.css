@@ -1,0 +1,479 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	font-family: Microsoft Yahei;
+	box-sizing: border-box;
+}
+/*navbar*/
+.navbar{
+	height: 200px;
+	width: 100%;
+	background-color: white;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.nav-info{
+	height: 40px;
+	background-color: #4b4d52;
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+}
+
+.nav-info a{
+	text-decoration: none;
+	/*color: white;*/
+	color: #d6d2d2 !important;
+	font-size: 14px;
+	line-height: 40px;
+	margin-left: 5px;
+	margin-right:25px; 
+}
+
+.nav-info a:hover{
+	color:white  !important;
+}
+
+.nav-search{
+	height: 100px;
+	width: 100%;
+	/*background-color: gray;*/
+	display: flex;
+	justify-content: flex-start;
+	align-content: center;
+	position: relative;
+}
+
+
+.search-form{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+
+
+.searchIn{
+	width: 31%;
+	height: 44px;
+	border: 2px solid #4b4d52;
+	position: absolute;
+	left: 49%;
+	top: 27%;
+	outline: none;
+	font-size: 16px;
+	text-indent: 10px;
+}
+
+.searchBtn{
+	width: 7%;
+	height: 44px;
+	border: 2px solid #3f4247;
+	background-color: #4b4d52;
+	position: absolute;
+	right: 13%;
+	top: 26.6%;
+	/*padding: 5px 15px;*/
+	/*padding-top: 9px;*/
+	text-indent: 5px;
+	outline: none;
+
+
+}
+
+.searchBtn a{
+	text-decoration: none;
+	text-align: center;
+	color: white;
+	font-size: 19px;	
+}
+
+.logo{
+	width: 36%;
+	margin-left: 6%;
+}
+
+.search-logo{
+	text-decoration: none;
+	color: #4b4d52;
+	font-size: 26px;
+	position: absolute;
+	left: 45%;
+	top: 30.5%;
+
+}
+.search-logo img{
+	width: 20px;
+	margin-left:-6px; 
+}
+
+.menu{
+	width: 100%;
+	height: 50px;
+	list-style: none;
+	display: flex;
+	justify-content: flex-start;
+	background-color: #f2f1ea;
+	margin-bottom: 0px;
+	padding-left: 11%;
+
+}
+
+.menu li a:hover{
+	font-weight: 600;
+	border: solid #b5aa9a; 
+	border-width: 0 0 2px 0;	
+}
+
+.menu li{
+	height: 50px;
+	display: inline-flex;
+	justify-content: space-around;
+	/*margin-left: 140px;*/
+	padding-top: 18px;
+	margin-right: 100px; 
+
+}
+.menu a{
+	text-decoration: none;
+	color: #3f4247;
+}
+
+.menu li a.active{
+	font-weight: 600;
+	border: solid #b5aa9a; 
+	border-width: 0 0 2px 0;
+}
+
+/*轮播图*/
+@charset "UTF-8";
+    .slider, .slider .slider-img {
+    overflow: hidden;
+    height: 295px;
+}
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:after, blockquote:before, q:after, q:before {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.carousel{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.book-guide{
+    width: 200px;
+    height: 295px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-guide h4{
+    height: 30px;
+    width: 200px;
+    text-align: center;
+    color: white;
+    padding-top: 7px;
+    background-color: #4b4d52;
+}
+
+.book-class li{
+    width: 150px;
+    height: 28px;
+    margin: 0 auto;
+    padding-top: 5px;
+    list-style: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.book-class li a{
+    text-decoration: none;
+    color: gray;
+    text-align: left;
+    font-size: 14px;
+}
+
+.book-class li a:hover{
+	font-weight: 600;
+}
+
+.slider {
+    width: 1000px;
+    margin: 0 30px;
+    /*margin: 0 auto;*/
+    position: relative;
+}
+.slider:hover .slider-btn {
+    color: #fff;
+    text-shadow: 0 0 5px #666;
+}
+.slider .slider-img {
+    width: 12000px;
+    position: relative;
+}
+.slider .slider-img .slider-img-ul {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+.slider .slider-img .slider-img-ul li {
+    float: left;
+}
+.slider .slider-img .slider-img-ul li img {
+    width: 1000px;
+    /*height: 460px;*/
+}
+.slider .slider-dot ul {
+    position: absolute;
+    right: 50px;
+    bottom: 30px;
+}
+.slider .slider-dot ul li {
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    border: 2px solid #fff;
+    float: left;
+    margin-left: 10px;
+}
+.slider .slider-dot ul li.active, .slider .slider-dot ul li:hover {
+    background: #fff;
+}
+.slider .slider-btn {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    top: 50%;
+    line-height: 100px;
+    text-align: center;
+    color: #f2f1ea;
+    font-size: 28px;
+    text-decoration: none;
+    font-family: '黑体';
+    /*color: rgba(255, 255, 255, 0);*/
+}
+.slider .slider-btn:hover {
+    background: rgba(125, 125, 125, .3);
+}
+.slider .slider-btn.slider-btn-left {
+    left: 0;
+    margin-top: -50px;
+}
+.slider .slider-btn.slider-btn-right {
+    right: 0;
+    margin-top: -50px;
+}
+
+
+
+/*图书分类*/
+
+#container{
+	width: 100%;
+	margin: 20px auto 20px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	/*border-left: 1px solid #ccc;*/
+	padding-bottom: 20px;
+	padding-left: 20px;
+	/*background: #ccc;*/
+}
+
+.book-part{
+	width:90%;
+	height: auto; 
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	margin: 0 auto;
+}
+
+.book-part .book-title{
+	text-decoration: none;
+	width: 99%;
+	height: 38px;
+	font-family: Microsoft Yahei;
+	border-bottom: 1px solid #ccc;
+	cursor: pointer;
+}
+.book-part .book-title a{
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 20px;
+	color: #4b4d52;	
+}
+
+
+
+.book-part .more{
+	text-decoration:none;
+	position: absolute;
+	right: 1%;
+	top: 3%;
+	font-size: 13px;
+	color: #4b4d52;
+}
+
+
+
+.book-lists{
+	width: 100%;
+	height: auto;
+	/*background-color: #ccc;*/
+	display: flex;
+	justify-content: flex-start;
+	margin-top:15px; 
+	margin-bottom:5px; 
+	flex-wrap: wrap;
+}
+
+.book-list{
+	/*width: 20%;*/
+	min-width: 16%;
+	height: 310px;
+	overflow: hidden;
+	border: 1px solid #eae1d2;
+	margin-right: 25px;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	margin-bottom: 30px;
+	position: relative;
+}
+
+.book-pic{
+	width: 80%;
+	height: 180px;
+	border-bottom: 1px solid gray;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	margin:2px auto;
+}
+
+.book-pic img{
+	margin:auto;	
+	width: 150px;
+}
+
+.book-name{
+	width: 100%;
+	line-height: 26px;
+	text-align: center;
+	font-size: 17px;
+	color: #ae6d6a;
+}
+
+.book-info{
+	display: flex;
+	flex-direction: column;
+	text-decoration: none;
+	justify-content: center;
+
+}
+
+.askbook-info span{
+	line-height: 23px;
+	margin-left: 27px;
+	color: #272222d6;
+	font-size: 13px;
+	word-wrap:break-word;
+}
+
+/*.book-name{
+	line-height: 26px;
+	margin-left: 27px;
+	font-size: 17px;
+	color: #ae6d6a;
+}*/
+
+.book-detail{
+	width: 185px;
+	height: 34px;
+	line-height: 18px;
+	margin-left: 27px;
+	color: #272222d6;
+	font-size: 13px;
+	word-wrap:break-word;
+}
+
+.book-price{
+	width: 100%;
+	height: 34px;
+	font-size: 17px;
+	line-height: 60px;
+	margin-left: 27px;
+	color: #880b16;
+}
+
+
+.book-buy{
+	width: 40px;
+	height: 36px;
+	padding: 5px;
+	margin-left: 45px; 
+	text-decoration: none;
+	color: white;
+	font-size: 13px;
+	border: 1px solid #4b4d52;
+	border-radius: 2px;
+	background: #4b4d52;
+}
+
+.book-buy:hover{
+	/*font-weight: 600;*/
+	background-color: #626a55;
+	border: 1px solid #626a55;
+	font-weight: 600;
+}
+
+/*脚步*/
+footer{
+	border-top: 1px solid #ccc;
+	width: 100%;
+	height: 70px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+}
+
+footer a{
+	text-align: center;
+	font-size: 15px;
+	/*margin-left: 30%;*/
+	text-decoration: none;
+	color: gray;
+}
