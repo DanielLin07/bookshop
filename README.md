@@ -34,6 +34,6 @@
 ## 图书详情
 ![bookDetail](https://github.com/DanielLin07/bookshop/blob/master/Screenshots/bookDetail.jpg)
 ## 个人书架
-![bookshelf](https://github.com/DanielLin07/bookshop/blob/master/Screenshots/bookshelf.jpg)
+![bookshelf](https://github.com/DanielLin07/bookshop/blob/master/Screenshots/myBookshelf.jpg)
 ## 上传图书
 ![upload](https://github.com/DanielLin07/bookshop/blob/master/Screenshots/upload.jpg)
