@@ -7,7 +7,7 @@
 
 # 快速上手
 ## 1、运行环境
-- IDE:IntelliJ IDEA
+- IDE：IntelliJ IDEA
 - 项目构建工具：Maven
 - 数据库：MySQL
 - Tomcat：Tomcat 8.0.47

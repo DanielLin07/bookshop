@@ -54,7 +54,7 @@
             但是在使用拦截所有URL地址之后会出现静态资源无法加载(被拦截)
         -->
         <!--<url-pattern>/</url-pattern>-->
-        <url-pattern>*.do</url-pattern>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
 
 </web-app>

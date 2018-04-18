@@ -20,13 +20,15 @@
     </div><!-- nav-menu -->
 
     <div class="nav-search">
-        <input type="search" class="searchIn" placeholder="搜图书...">
-        <button class="search-logo"><img src="<%=request.getContextPath()%>/img/search2.png"></button>
+        <form action="searchBook.do" method="post">
+            <input type="search" class="searchIn" name="name" placeholder="搜图书...">
+            <button class="search-logo"><img src="<%=request.getContextPath()%>/img/search2.png"></button>
+        </form>
     </div>
 
     <div class="nav-info">
         <a href="#" class="username">${user.getName()}</a>
-        <a href="myBookShelf.do" class="bookshelf">||&nbsp;&nbsp;&nbsp;我的书架</a>
+        <a href="myBookshelf.do" class="bookshelf">||&nbsp;&nbsp;&nbsp;我的书架</a>
         <a href="logout.do" class="logout">[ 退 出 ]</a>
     </div> <!-- nav-info-end -->
 </nav>

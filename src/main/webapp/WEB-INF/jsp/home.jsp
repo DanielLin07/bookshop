@@ -12,17 +12,19 @@
     <nav class="navbar">
         <div class="nav-info">
             <a href="#" class="username">${user.getName()}</a>
-            <a href="myBookShelf.do" class="bookshelf">||&nbsp;&nbsp;&nbsp;我的书架</a>
+            <a href="myBookshelf.do" class="bookshelf">||&nbsp;&nbsp;&nbsp;我的书架</a>
             <a href="logout.do" class="logout">[ 退 出 ]</a>
         </div> <!-- nav-info -->
+        <form action="searchBook.do" method="post">
         <div class="nav-search">
             <a href="home.do"><img class="logo" src="<%=request.getContextPath()%>/img/logo2.png"></a>
             <div class="search-form">
-                <input type="search" class="searchIn" placeholder="搜图书...">
+                <input id="search-input" name="name" type="search" class="searchIn" placeholder="搜图书...">
                 <a href="#" class="search-logo">| &nbsp;<img src="<%=request.getContextPath()%>/img/search.png"></a>
-                <button class="searchBtn"><a href="#">搜索</a></button>
+                <button type="submit" id="search-button" class="searchBtn">搜索</button>
             </div>
         </div><!--  nav-search -->
+        </form>
         <ul class="menu">
             <li><a class="active" href="home.do">首页</a></li>
             <li><a href="goBookStore.do">书籍良品</a></li>
@@ -66,7 +68,7 @@
             <ul class="book-lists">
                 <c:forEach items="${books.value}" var="book" varStatus="bookStatus">
                 <li class="book-list">
-                    <a href="bookDetail.do?id=${book.getId()}" class="book-pic" target="_blank">
+                    <a href="book/${book.getId()}" class="book-pic" target="_blank">
                         <img src="<%=request.getContextPath()%>/img/book-list/article/${book.getBookImage().getId()}.jpg">
                     </a>
                     <a href="#" class="book-info">
@@ -92,6 +94,25 @@
     <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-3.2.js"></script>
     <script type="text/javascript">
         $(function(){
+
+            /*$('#search-button').click(function (event) {
+                var keyword = $('#search-input').val();
+                var book_ = {"name":keyword};
+                var jsonData = JSON.stringify(book_);
+                var flag = "";
+                $.ajax({
+                    type:"POST",
+                    url:"searchBook.do",
+                    async:false,
+                    dataType:"json",
+                    contentType:"application/json;charset=UTF-8",
+                    data:jsonData,
+                    success:function (msg) {
+                        flag = msg;
+                    }
+                });
+
+            });*/
 
             $(".book-class li a").on("click",function(){
                 var classId = $(this).prop("title");

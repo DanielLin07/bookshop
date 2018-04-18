@@ -57,7 +57,9 @@ public class BookServiceImpl implements BookService{
 
     @Override
     public Book get(int id) {
-        return bookDAO.get(id);
+         Book book = bookDAO.get(id);
+         book.setBookImage(bookImageDAO.getByBookId(id));
+         return book;
     }
 
     @Override
@@ -73,6 +75,11 @@ public class BookServiceImpl implements BookService{
     @Override
     public int count() {
         return bookDAO.count();
+    }
+
+    @Override
+    public void delete(int id) {
+        bookDAO.delete(id);
     }
 
     @Override

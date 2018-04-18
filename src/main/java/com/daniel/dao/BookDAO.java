@@ -19,6 +19,8 @@ public interface BookDAO {
 
     int count();
 
+    void delete(int id);
+
     List<Book> list();
 
     List<Book> listByBookType(int bookType);

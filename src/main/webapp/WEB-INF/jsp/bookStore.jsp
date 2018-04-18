@@ -13,17 +13,19 @@
     <nav class="navbar">
         <div class="nav-info">
             <a href="#" class="username">${user.getName()}</a>
-            <a href="myBookShelf.do" class="bookshelf">||&nbsp;&nbsp;&nbsp;我的书架</a>
+            <a href="myBookshelf.do" class="bookshelf">||&nbsp;&nbsp;&nbsp;我的书架</a>
             <a href="logout.do" class="logout">[ 退 出 ]</a>
         </div> <!-- nav-info -->
-        <div class="nav-search">
-            <a href="home.do"><img class="logo" src="<%=request.getContextPath()%>/img/logo2.png"></a>
-            <div class="search-form">
-                <input type="search" class="searchIn" placeholder="搜图书...">
-                <a href="#" class="search-logo">| &nbsp;<img src="<%=request.getContextPath()%>/img/search.png"></a>
-                <button class="searchBtn"><a href="#">搜索</a></button>
-            </div>
-        </div><!--  nav-search -->
+        <form action="searchBook.do" method="post">
+            <div class="nav-search">
+                <a href="home.do"><img class="logo" src="<%=request.getContextPath()%>/img/logo2.png"></a>
+                <div class="search-form">
+                    <input id="search-input" name="name" type="search" class="searchIn" placeholder="搜图书...">
+                    <a href="#" class="search-logo">| &nbsp;<img src="<%=request.getContextPath()%>/img/search.png"></a>
+                    <button type="submit" id="search-button" class="searchBtn">搜索</button>
+                </div>
+            </div><!--  nav-search -->
+        </form>
         <ul class="menu">
             <li><a href="home.do">首页</a></li>
             <li><a class="active" href="goBookStore.do">书籍良品</a></li>
@@ -51,7 +53,7 @@
         <ul class="book-lists">
             <c:forEach items="${books}" var="book" varStatus="bookStatus">
             <li class="book-list">
-                <a href="bookDetail.do?id=${book.getId()}" class="book-pic">
+                <a href="bookDetail.do?id=${book.getId()}" class="book-pic" target="_blank">
                     <img src="<%=request.getContextPath()%>/img/book-list/article/${book.getBookImage().getId()}.jpg">
                 </a>
                 <a href="#" class="book-info">

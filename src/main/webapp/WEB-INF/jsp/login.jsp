@@ -24,6 +24,7 @@
 </body>
 <script src="<%=request.getContextPath()%>/js/jquery-3.2.js"></script>
 <script>
+
     $('#login-button').click(function (event) {
         $('#errorInfo').html("");
         var studentid_ = $('#studentid').val();
@@ -32,6 +33,7 @@
             $('#errorInfo').html("请输入学号或密码！");
             return false;
         }
+
         var user_ = {"studentid":studentid_,"password":password_};
         var jsonData = JSON.stringify(user_);
         var flag = "";
@@ -53,6 +55,6 @@
             event.preventDefault();
             $('#errorInfo').html("学号或密码输入错误！");
         }
-    })
+    });
 </script>
 </html>

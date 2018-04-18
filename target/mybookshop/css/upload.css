@@ -41,7 +41,7 @@
 
 }
 
-form{
+#bookForm{
 	height: 580px;
 	display: flex;
 	flex-direction: column;
@@ -98,8 +98,8 @@ form{
 	background-image: url(../img/condition.png);
 }
 
-.orign-icon{
-	background-image: url(../img/orign.png);
+.origin-icon{
+	background-image: url(../img/origin.png);
 }
 
 .price-icon{

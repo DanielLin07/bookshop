@@ -101,7 +101,7 @@
 	padding-bottom: 15px;
 }
 
-.adress-icon,
+.address-icon,
 .call-icon,
 .major-icon {
 	width: 25px;
@@ -113,8 +113,8 @@
 	top:-10%;
 }
 
-.adress-icon{
-	background-image: url(../img/adress.png);
+.address-icon{
+	background-image: url(../img/address.png);
 }
 
 .call-icon{
@@ -174,22 +174,24 @@
 	background-size: cover;
 	background-position: center;
 	position: absolute;
-	right: 12%;
-	top: 3px;
+	right: 265px;
+	top: 5px;
 }
-.card-btn a{
+
+.card-btn #sell-upload,.card-btn #ask-upload{
 	text-decoration: none;
-	padding: 4px 10px;
+	padding: 3px 10px;
 	border: 2px solid #ae6d6a;
 	background-color: white;
 	color: #ae6d6a;
 	border-radius: 3px;
 	position: absolute;
-	right: 0px;
-	margin-top: 3px;
+	right: 140px;
+	margin-top: 5px;
+	font-size: 14px;
 }
 
-.card-btn a:hover{
+#sell-upload:hover,#ask-upload:hover,#delete-book:hover{
 	border: 1px solid #ae6d6a;
 	background-color: #ae6d6a;
 	color: white;	
@@ -197,6 +199,18 @@
 
 #ask-upload{
 	display: none;
+}
+
+#delete-book{
+	margin-top: 5px;
+	position: absolute;
+	right: 20px;
+	text-decoration: none;
+	padding: 3px 10px;
+	border: 2px solid #ae6d6a;	
+	font-size: 14px;
+	color: #ae6d6a;
+	border-radius: 3px;	
 }
 
 .book-ul{
@@ -215,7 +229,8 @@
 	width: 30%;
 	min-width: 30%;
 	height: 320px;
-	overflow: hidden;
+	/*overflow: hidden;*/
+	overflow: visible;
 	border: 1px solid #eae1d2;
 	margin-right: 35px;
 	display: flex;
@@ -264,7 +279,7 @@
 	line-height: 22px;
 }
 
-.book-price,.orinal-price{
+.book-price,.original-price{
 	width: 100%;
 	height: 34px;
 	font-size: 15px;
@@ -282,3 +297,21 @@
 	right: 0px;
 	cursor: pointer;
 }
+
+.delete-btn{
+	width: 28px;
+	height: 28px;
+	background-image: url(../img/delete2.png);
+	background-size: cover;
+	background-position: center;
+	position: absolute;
+	left: 3px;
+	top: 4px;
+	cursor: pointer;
+	z-index: 9999 !important;
+}
+
+.book-id{
+	display: none;
+}
+

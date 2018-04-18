@@ -7,5 +7,6 @@ public interface BookImageService {
 
     BookImage getByBookId(int bid);
     void add(BookImage bookImage);
-    void deleteByBid(Book book);
+    void update(BookImage bookImage);
+    void deleteByBookId(int bid);
 }

@@ -61,18 +61,26 @@
 }
 
 .searchBtn{
-	width: 90px;
+	width: 7%;
 	height: 44px;
 	border: 2px solid #3f4247;
 	background-color: #4b4d52;
 	position: absolute;
-	right: 12%;
+	right: 13%;
 	top: 26.6%;
-	/*padding-top: 9px;*/
 	text-indent: 5px;
 	outline: none;
+	text-decoration: none;
+	text-align: center;
+	color: white;
+	font-size: 18px;
+	cursor: pointer;
+	transition: all 0.3s;
+}
 
-
+.searchBtn:hover{
+	font-size: 21px;
+	/*text-decoration: underline;*/
 }
 
 .searchBtn a{

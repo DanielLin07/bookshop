@@ -21,13 +21,15 @@
     </div><!-- nav-menu -->
 
     <div class="nav-search">
-        <input type="search" class="searchIn" placeholder="搜图书...">
-        <button class="search-logo"><img src="<%=request.getContextPath()%>/img/search2.png"></button>
+        <form action="searchBook.do" method="post">
+            <input type="search" class="searchIn" name="name" placeholder="搜图书...">
+            <button class="search-logo"><img src="<%=request.getContextPath()%>/img/search2.png"></button>
+        </form>
     </div>
 
     <div class="nav-info">
         <a href="#" class="username">${user.getName()}</a>
-        <a href="myBookShelf.do" class="bookshelf">||&nbsp;&nbsp;&nbsp;我的书架</a>
+        <a href="myBookshelf.do" class="bookshelf">||&nbsp;&nbsp;&nbsp;我的书架</a>
         <a href="logout.do" class="logout">[ 退 出 ]</a>
     </div> <!-- nav-info-end -->
 </nav>
@@ -68,6 +70,7 @@
     <p class="upload-icon"></p>
     <a id="sell-upload" href="goUpload.do?bookType=1">上传书至书摊</a>
     <a id="ask-upload" href="goUpload.do?bookType=0">上传求书信息</a>
+    <a id="delete-book" href="#">删除二手书</a>
 </div>
 
 <!-- 我的书摊 -->
@@ -80,6 +83,10 @@
                     <img src="img/book-list/article/${book.getBookImage().getId()}.jpg">
                 </p>
                 <h5 class="book-name">${book.getName()}</h5>
+                <form>
+                    <input type="text" name="book-id" class="book-id" value="${book.getId()}">
+                </form>
+                <span class="delete-btn"></span>
                 <a href="goEditBook.do?id=${book.getId()}" class="edit-btn"></a>
                 <div class="book-detail">
                     <p>原&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价：<span class="orinal-price">￥${book.getOriginalPrice()}</span></p>

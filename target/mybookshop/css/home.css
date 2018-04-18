@@ -77,20 +77,23 @@
 	position: absolute;
 	right: 13%;
 	top: 26.6%;
-	/*padding: 5px 15px;*/
-	/*padding-top: 9px;*/
 	text-indent: 5px;
 	outline: none;
-
-
-}
-
-.searchBtn a{
 	text-decoration: none;
 	text-align: center;
 	color: white;
-	font-size: 19px;	
+	font-size: 18px;
+	cursor: pointer;
+	transition: all 0.3s;	
 }
+
+.searchBtn:hover{
+	font-size: 21px;
+	/*text-decoration: underline;*/
+}
+
+
+
 
 .logo{
 	width: 36%;

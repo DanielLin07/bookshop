@@ -12,16 +12,16 @@
         delete from bookimage where id= #{id}
     </delete>
 
-    <delete id="deleteByBid" parameterType="Book" >
-        delete from bookimage where bid= #{id}
+    <delete id="deleteByBookId" parameterType="_int" >
+        delete from bookimage where bid= #{bid}
     </delete>
 
     <select id="get" parameterType="_int" resultType="BookImage">
-        select * from   bookimage  where id= #{id}
+        select * from bookimage where id= #{id}
     </select>
 
     <update id="update" parameterType="BookImage" >
-        update bookimage set name=#{name} where id=#{id}
+        update bookimage set bid=#{book.id} where id=#{id}
     </update>
 
     <select id="list" resultType="BookImage">

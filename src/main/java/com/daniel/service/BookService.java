@@ -13,6 +13,7 @@ public interface BookService {
     int getUserId(int id);
     void add(Book book);
     int count();
+    void delete(int id);
     List<Book> list();
     List<Book> listBookByUserId(int uid,int bookType);
     List<Book> listBookByCategoryId(int bookType,int cid);

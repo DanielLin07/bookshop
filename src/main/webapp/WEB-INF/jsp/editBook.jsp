@@ -15,20 +15,20 @@
     <div class="nav-menu">
         <ul class="menu">
             <li><a class="active" href="home.do">首页</a></li>
-            <li><a href="goBookStore.do">书籍良品</a></li>
+            <li><a href="../goBookStore.do">书籍良品</a></li>
             <li><a href="goAskBookStore.do">求书区</a></li>
             <li><a href="#">服务区</a></li>
         </ul>
     </div><!-- nav-menu -->
 
-    <div class="nav-search">
-        <input type="search" class="searchIn" placeholder="搜图书...">
-        <button class="search-logo"><img src="<%=request.getContextPath()%>/img/search2.png"></button>
-    </div>
+    <form class="nav-search">
+            <input type="search" class="searchIn" name="name" placeholder="搜图书...">
+            <button class="search-logo"><img src="<%=request.getContextPath()%>/img/search2.png"></button>
+    </form>
 
     <div class="nav-info">
         <a href="#" class="username">${user.getName()}</a>
-        <a href="myBookShelf.do" class="bookshelf">||&nbsp;&nbsp;&nbsp;我的书架</a>
+        <a href="myBookshelf.do" class="bookshelf">||&nbsp;&nbsp;&nbsp;我的书架</a>
         <a href="logout.do" class="logout">[ 退 出 ]</a>
     </div> <!-- nav-info-end -->
 </nav>
@@ -61,7 +61,7 @@
         </select>
         </p>
         <p>
-            <span class="orign-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span class="origin-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
             书&nbsp;本&nbsp;&nbsp;原&nbsp;价：<input type="text" name="originalPrice" value="${book.getOriginalPrice()}">
         </p>
         <p>

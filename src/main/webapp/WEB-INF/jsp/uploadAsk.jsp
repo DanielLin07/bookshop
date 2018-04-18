@@ -21,13 +21,15 @@
     </div><!-- nav-menu -->
 
     <div class="nav-search">
-        <input type="search" class="searchIn" placeholder="搜图书...">
-        <button class="search-logo"><img src="<%=request.getContextPath()%>/img/search2.png"></button>
+        <form action="searchBook.do" method="post">
+            <input type="search" class="searchIn" name="name" placeholder="搜图书...">
+            <button class="search-logo"><img src="<%=request.getContextPath()%>/img/search2.png"></button>
+        </form>
     </div>
 
     <div class="nav-info">
         <a href="#" class="username">${user.getName()}</a>
-        <a href="myBookShelf.do" class="bookshelf">||&nbsp;&nbsp;&nbsp;我的书架</a>
+        <a href="myBookshelf.do" class="bookshelf">||&nbsp;&nbsp;&nbsp;我的书架</a>
         <a href="logout.do" class="logout">[ 退 出 ]</a>
     </div> <!-- nav-info-end -->
 </nav>
@@ -37,7 +39,7 @@
 </div>
 
 <div class="ask container">
-    <form enctype="multipart/form-data" id="bookForm">
+    <form enctype="multipart/form-data" id="bookForm" class="upload-form">
         <p>
             <span class="pic-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
             上传书图片： <input type="file" name="image">
@@ -68,6 +70,13 @@
 <script>
 
     $("#book-submit").click(function (event){
+        var bookForm = $("#bookForm").serializeArray();
+        for (var i = 0;i<bookForm.length;i++){
+            if (bookForm[i].value.length == 0){
+                alert("请将信息填写完整！");
+                return false;
+            }
+        }
         var status = "";
         $("#bookForm").ajaxSubmit({
             type:"POST",

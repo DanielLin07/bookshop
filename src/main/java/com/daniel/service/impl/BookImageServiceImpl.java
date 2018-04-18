@@ -24,7 +24,12 @@ public class BookImageServiceImpl implements BookImageService{
     }
 
     @Override
-    public void deleteByBid(Book book) {
-        bookImageDAO.deleteByBid(book);
+    public void update(BookImage bookImage) {
+        bookImageDAO.update(bookImage);
+    }
+
+    @Override
+    public void deleteByBookId(int bid) {
+        bookImageDAO.deleteByBookId(bid);
     }
 }

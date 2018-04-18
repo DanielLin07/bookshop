@@ -32,7 +32,7 @@
         (#{name},#{bookType},#{author},#{category.id},#{originalPrice},#{price},#{press},#{publishDate},#{version},#{degree},#{description},#{user.id},#{date})
     </insert>
 
-    <delete id="delete" parameterType="Book" >
+    <delete id="delete" parameterType="_int" >
         delete from book where id= #{id}
     </delete>
 
@@ -65,7 +65,7 @@
     </select>
 
     <select id="getListByUserId" resultType="Book">
-        select * from book where uid = #{uid} and bookType = #{bookType}
+        select * from book where uid = #{uid} and bookType = #{bookType} order by date desc
     </select>
 
     <select id="getUserId" resultType="_int">
