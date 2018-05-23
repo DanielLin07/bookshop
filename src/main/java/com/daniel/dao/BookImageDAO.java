@@ -1,8 +1,6 @@
 package com.daniel.dao;
 
-import com.daniel.pojo.Book;
 import com.daniel.pojo.BookImage;
-import org.apache.ibatis.annotations.Param;
 
 public interface BookImageDAO {
 

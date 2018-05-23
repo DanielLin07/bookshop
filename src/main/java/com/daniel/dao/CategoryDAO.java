@@ -15,6 +15,7 @@ public interface CategoryDAO {
 
     void update(Category category);
 
+    // 获取所有Category
     List<Category> list();
 
     int count();

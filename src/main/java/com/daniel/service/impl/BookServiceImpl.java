@@ -22,12 +22,15 @@ public class BookServiceImpl implements BookService{
     private BookImageDAO bookImageDAO;
 
     @Override
-    public Map<Category,List<Book>> listBookByCategory() {
+    public Map<Category,List<Book>> listByCategory() {
+        // 获取所有Category
         List<Category> categories = categoryDAO.list();
+        // 使用LinkedHashMap存储，若使用HashMap则无序
         Map<Category,List<Book>> booksMap = new LinkedHashMap<>();
         for (Category category : categories) {
             List<Book> books = bookDAO.getListByCategoryId(0,5,1,category.getId());
             if (books.size() > 0) {
+                // 当前的Book对象无BookImage，遍历每个Book对象并放入相应的BookImage
                 for (Book book : books) {
                     book.setBookImage(bookImageDAO.getByBookId(book.getId()));
                 }
@@ -38,7 +41,7 @@ public class BookServiceImpl implements BookService{
     }
 
     @Override
-    public List<Book> listBookByUserId(int uid,int bookType) {
+    public List<Book> listByUserId(int uid,int bookType) {
         List<Book> books = bookDAO.getListByUserId(uid,bookType);
         for (Book book : books) {
             book.setBookImage(bookImageDAO.getByBookId(book.getId()));
@@ -47,7 +50,7 @@ public class BookServiceImpl implements BookService{
     }
 
     @Override
-    public List<Book> listBookByCategoryId(int bookType,int cid) {
+    public List<Book> listByCategoryId(int bookType,int cid) {
         List<Book> books = bookDAO.getListByCategoryId(-1,-1,bookType,cid);
         for (Book book : books) {
             book.setBookImage(bookImageDAO.getByBookId(book.getId()));

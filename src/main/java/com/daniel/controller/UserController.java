@@ -1,47 +1,62 @@
 package com.daniel.controller;
 
+import com.daniel.common.Result;
+import com.daniel.common.ResultGenerator;
 import com.daniel.pojo.User;
 import com.daniel.service.UserService;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
+import java.util.Map;
 
-@Controller
-public class LoginController {
+@RestController
+@RequestMapping("/users")
+public class UserController {
 
     @Autowired
     private UserService userService;
 
-    @RequestMapping("/")
-    public ModelAndView login(HttpServletRequest request) {
-        if (request.getSession().getAttribute("user")!=null){
-            return new ForeController().goHome(request);
-        }
+    // 日志文件
+    private static final Logger log = Logger.getLogger(UserController.class);
+
+    @RequestMapping("")
+    public ModelAndView login() {
         return new ModelAndView("login");
     }
 
+    /**
+     * 验证登录
+     * @param user 用户输入的学号与密码封装成的User对象
+     * @param request 登录成功时将user存入session当中
+     * @return 登录成功后跳转至首页
+     */
+    @RequestMapping(value = "/sessions",method = RequestMethod.POST)
     @ResponseBody
-    /*@RequestMapping(value = "/user",method = RequestMethod.GET)*/
-    @RequestMapping("checkLogin.do")
-    public String checkLogin(@RequestBody User user, HttpServletRequest request) {
+    public Result checkLogin(@RequestBody User user, HttpServletRequest request) {
+        // userService验证是否登录成功
         boolean flag = userService.checkUser(user);
-        String str;
+        log.info("request: user/login , user: " + user.toString());
         if (flag) {
-            str = "0";
+            Map data = new HashMap();
+            data.put("currentUser",user);
+            // 登录成功，将登录信息放入session
             request.getSession().setAttribute("user",userService.getByStudentid(user.getStudentid()));
+            return ResultGenerator.genSuccessResult(data);
         }else {
-            str = "1";
+            return ResultGenerator.genFailResult("学号或密码输入错误！");
         }
-        return str;
     }
 
-    @RequestMapping("logout.do")
+    /**
+     * 登出操作
+     * @param request 用于获取session中的User对象
+     * @return 登出后跳转至登录界面
+     */
+    @RequestMapping("/logout.do")
     public ModelAndView logout(HttpServletRequest request) {
         request.getSession().removeAttribute("user");
         return new ModelAndView("login");

@@ -12,12 +12,12 @@
     <nav class="navbar">
         <div class="nav-info">
             <a href="#" class="username">${user.getName()}</a>
-            <a href="myBookshelf.do" class="bookshelf">||&nbsp;&nbsp;&nbsp;我的书架</a>
-            <a href="logout.do" class="logout">[ 退 出 ]</a>
+            <a href="/myBookshelf.do" class="bookshelf">||&nbsp;&nbsp;&nbsp;我的书架</a>
+            <a href="/logout.do" class="logout">[ 退 出 ]</a>
         </div> <!-- nav-info -->
         <form action="searchBook.do" method="post">
         <div class="nav-search">
-            <a href="home.do"><img class="logo" src="<%=request.getContextPath()%>/img/logo2.png"></a>
+            <a href="/home.do"><img class="logo" src="<%=request.getContextPath()%>/img/logo2.png"></a>
             <div class="search-form">
                 <input id="search-input" name="name" type="search" class="searchIn" placeholder="搜图书...">
                 <a href="#" class="search-logo">| &nbsp;<img src="<%=request.getContextPath()%>/img/search.png"></a>
@@ -27,8 +27,8 @@
         </form>
         <ul class="menu">
             <li><a class="active" href="home.do">首页</a></li>
-            <li><a href="goBookStore.do">书籍良品</a></li>
-            <li><a href="goAskBookStore.do">求书区</a></li>
+            <li><a href="/goBookStore.do">书籍良品</a></li>
+            <li><a href="/goAskBookStore.do">求书区</a></li>
             <li><a href="#">服务区</a></li>
         </ul>
     </nav>
@@ -68,7 +68,8 @@
             <ul class="book-lists">
                 <c:forEach items="${books.value}" var="book" varStatus="bookStatus">
                 <li class="book-list">
-                    <a href="book/${book.getId()}" class="book-pic" target="_blank">
+                    <%--<a href="bookDetail.do?id=${book.getId()}" class="book-pic" target="_blank">--%>
+                    <a href="/books/${book.getId()}" class="book-pic" target="_blank">
                         <img src="<%=request.getContextPath()%>/img/book-list/article/${book.getBookImage().getId()}.jpg">
                     </a>
                     <a href="#" class="book-info">
@@ -90,8 +91,8 @@
         <a href="#">意见反馈&nbsp;&nbsp;&nbsp;联系我们&nbsp;&nbsp;&nbsp;隐私权声明&nbsp;&nbsp;&nbsp;使用条款</a>
     </footer>
 
-    <script type="text/javascript" src="<%=request.getContextPath()%>/js/xSlider.js"></script>
     <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-3.2.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/js/xSlider.js"></script>
     <script type="text/javascript">
         $(function(){
 

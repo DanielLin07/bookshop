@@ -15,7 +15,7 @@ public class UserServiceImpl implements UserService{
     @Override
     public boolean checkUser(User user) {
         int flag = userDAO.checkPassword(user);
-        return flag==1?true:false;
+        return flag==1;
     }
 
     @Override

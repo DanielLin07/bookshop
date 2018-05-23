@@ -50,7 +50,7 @@
     </select>
 
     <select id="listByBookType" resultType="Book">
-        select * from book where bookType=#{bookType}
+        select * from book where bookType=#{bookType} order by date desc
     </select>
 
     <select id="count" resultType="_int">
@@ -58,7 +58,7 @@
     </select>
 
     <select id="getListByCategoryId" resultMap="bookResultMap">
-        select * from book where cid = #{cid} and bookType = #{bookType}
+        select * from book where cid = #{cid} and bookType = #{bookType} order by date desc
         <if test="start != -1">
           limit #{start},#{count}
         </if>

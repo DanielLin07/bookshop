@@ -1,4 +1,4 @@
-package com.ssm.promotion.core.common;
+package com.daniel.common;
 
 /**
  * 响应结果生成工具

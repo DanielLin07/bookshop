@@ -137,4 +137,11 @@ public class Book {
     public void setBookImage(BookImage bookImage) {
         this.bookImage = bookImage;
     }
+
+    @Override
+    public String toString() {
+        return "id:" + this.id +
+                " ,name:" + this.name +
+                " ,category:" + this.category;
+    }
 }

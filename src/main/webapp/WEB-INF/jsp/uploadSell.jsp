@@ -120,22 +120,20 @@
                 return false;
             }
         }
-        var status = "";
+
         $("#bookForm").ajaxSubmit({
             type:"POST",
-            url:"upload.do",
+            url:"/books/",
             async:false,
             dataType:"json",
-            success:function(data){
-                status = data.msg;
+            success:function(result){
+                if (result.resultCode == 200){
+                    alert("上传成功");
+                }else {
+                    alert(result.message);
+                }
             }
         });
-
-        if (status == "1"){
-            alert("上传成功");
-        }else {
-            alert("上传失败");
-        }
 
         /*// 显示模态窗口
         var modal = document.getElementById("modal-dialog");

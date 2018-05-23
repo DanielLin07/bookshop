@@ -1,9 +1,7 @@
 package com.daniel.controller;
 
 import com.daniel.pojo.Book;
-import com.daniel.pojo.User;
 import com.daniel.service.BookService;
-import com.daniel.utils.UserUtils;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.TextField;
@@ -17,9 +15,7 @@ import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.RAMDirectory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import org.wltea.analyzer.lucene.IKAnalyzer;
 
@@ -37,8 +33,7 @@ public class SearchController {
     @RequestMapping("searchBook.do")
     public ModelAndView searchBook(HttpServletRequest request,Book book) throws IOException, ParseException {
 
-        ModelAndView mav = UserUtils.setUser(request,"searchBook");
-        if (mav.getViewName().equals("login")) return mav;
+        ModelAndView mav = new ModelAndView("searchBook");
 
         // 关键字
         String keyword = book.getName();

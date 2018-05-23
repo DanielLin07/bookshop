@@ -73,7 +73,7 @@
 			<a href="?start=${page.getStart()-page.getCount()}" class="page-pre">上一页</a>
 			<a href="?start=${page.getStart()+page.getCount()}" class="page-next">下一页</a>
 			<a href="?start=${page.getEnd()}" class="page-end">尾页</a>
-		</span>
+    </span>
 </div><!-- container end-->
 <footer>
     <a href="#">©2018-2019 二手书交易</a>

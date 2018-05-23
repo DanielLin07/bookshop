@@ -12,9 +12,9 @@
 <nav class="navbar">
     <div class="nav-menu">
         <ul class="menu">
-            <li><a class="active" href="home.do">首页</a></li>
-            <li><a href="goBookStore.do">书籍良品</a></li>
-            <li><a href="goAskBookStore.do">求书区</a></li>
+            <li><a class="active" href="/home.do">首页</a></li>
+            <li><a href="/goBookStore.do">书籍良品</a></li>
+            <li><a href="/goAskBookStore.do">求书区</a></li>
             <li><a href="#">服务区</a></li>
         </ul>
     </div><!-- nav-menu -->
@@ -46,7 +46,7 @@
         <span class="book-publish">${book.getAuthor()} 著 / ${book.getPress()} / ${book.getPublishDate()} / ${book.getVersion()}</span>
         <span class="book-price">
 				<p>售价 <a class="final-price">￥${book.getPrice()}</a></p>
-				<p>定价 <a class="orignal-price">￥${book.getOriginalPrice()} </a></p>
+				<p>定价 <a class="original-price">￥${book.getOriginalPrice()} </a></p>
 				<p>品相 <a class="condition">${book.getDegree()}新</a></p>
 			</span>
         <span class="book-descr">

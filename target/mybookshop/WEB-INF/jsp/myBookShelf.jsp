@@ -13,9 +13,9 @@
 <nav class="navbar">
     <div class="nav-menu">
         <ul class="menu">
-            <li><a class="active" href="home.do">首页</a></li>
-            <li><a href="goBookStore.do">书籍良品</a></li>
-            <li><a href="goAskBookStore.do">求书区</a></li>
+            <li><a class="active" href="/home.do">首页</a></li>
+            <li><a href="/goBookStore.do">书籍良品</a></li>
+            <li><a href="/goAskBookStore.do">求书区</a></li>
             <li><a href="#">服务区</a></li>
         </ul>
     </div><!-- nav-menu -->
@@ -29,8 +29,8 @@
 
     <div class="nav-info">
         <a href="#" class="username">${user.getName()}</a>
-        <a href="myBookshelf.do" class="bookshelf">||&nbsp;&nbsp;&nbsp;我的书架</a>
-        <a href="logout.do" class="logout">[ 退 出 ]</a>
+        <a href="/myBookshelf.do" class="bookshelf">||&nbsp;&nbsp;&nbsp;我的书架</a>
+        <a href="/logout.do" class="logout">[ 退 出 ]</a>
     </div> <!-- nav-info-end -->
 </nav>
 
@@ -87,9 +87,9 @@
                     <input type="text" name="book-id" class="book-id" value="${book.getId()}">
                 </form>
                 <span class="delete-btn"></span>
-                <a href="goEditBook.do?id=${book.getId()}" class="edit-btn"></a>
+                <a href="/books/renewal/${book.getId()}" class="edit-btn"></a>
                 <div class="book-detail">
-                    <p>原&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价：<span class="orinal-price">￥${book.getOriginalPrice()}</span></p>
+                    <p>原&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价：<span class="original-price">￥${book.getOriginalPrice()}</span></p>
                     <p>售&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价：<span class="book-price">￥${book.getPrice()}</span></p>
                     <p>品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;相：<span class="book-condition">${book.getDegree()}新</span></p>
                     <p>商品描述：<span class="book-desc">${book.getDescription()}</span></p>
@@ -108,7 +108,7 @@
                     <img src="img/book-list/article/${askBook.getBookImage().getId()}.jpg">
                 </p>
                 <h5 class="book-name">${askBook.getName()}</h5>
-                <a class="edit-btn" href="goEditAskBook.do?id=${book.getId()}"></a>
+                <a href="/books/renewal/${askBook.getId()}" class="edit-btn"></a>
                 <div class="book-detail">
                     <p>作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;者：<span class="book-author">${askBook.getAuthor()}</span></p>
                     <p>出&nbsp; 版&nbsp;社：<span class="book-press">${askBook.getPress()}</span></p>
@@ -127,5 +127,6 @@
 <!-- javascript- -->
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-3.2.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/myBookshelf.js"></script>
+
 </body>
 </html>

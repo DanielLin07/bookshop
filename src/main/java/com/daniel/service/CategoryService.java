@@ -12,6 +12,8 @@ public interface CategoryService {
     void update(Category category);
     void delete(int id);
     int count();
+
+    //获取一个Key为CategoryId，Value为CategoryName的Map
     Map<Integer,String> listByMap();
 
 }

@@ -1,18 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://java.sun.com/xml/ns/javaee"
-         xmlns:web="http://java.sun.com/xml/ns/javaee"
-         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1" metadata-complete="true">
 
-    <!-- spring的配置文件-->
-    <context-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:spring-mybatis.xml,classpath:spring-redis.xml</param-value>
-    </context-param>
-    <listener>
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>
-
+    <!-- 编码过滤器 -->
     <filter>
         <filter-name>CharacterEncodingFilter</filter-name>
         <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -23,7 +14,7 @@
     </filter>
     <filter-mapping>
         <filter-name>CharacterEncodingFilter</filter-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/</url-pattern>
     </filter-mapping>
 
     <filter>
@@ -32,6 +23,7 @@
     </filter>
     <filter-mapping>
         <filter-name>HiddenHttpMethodFilter</filter-name>
+        <servlet-name>mvc-dispatcher</servlet-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
@@ -39,21 +31,22 @@
     <servlet>
         <servlet-name>mvc-dispatcher</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-        <!-- spring mvc的配置文件 -->
+        <!-- 配置springMVC需要加载的配置文件
+			spring-dao.xml,spring-service.xml,spring-web.xml
+			Mybatis - > spring -> springmvc
+		 -->
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>classpath:springMVC.xml</param-value>
+            <param-value>classpath:spring/spring-*.xml</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>mvc-dispatcher</servlet-name>
-        <!--先配置成*.do告诉spring容器只对.do结尾的请求进行拦截转发-->
-        <!--因为涉及到前后端之间的地址传递，考虑使用/拦截所有的URL地址-->
         <!--如果是使用*.do不会存在静态资源无法访问的问题
             但是在使用拦截所有URL地址之后会出现静态资源无法加载(被拦截)
         -->
-        <!--<url-pattern>/</url-pattern>-->
+        <!--<url-pattern>*.do</url-pattern>-->
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 

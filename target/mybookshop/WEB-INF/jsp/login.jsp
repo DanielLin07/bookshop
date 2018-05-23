@@ -21,40 +21,40 @@
         </form>
         <p id="errorInfo"></p>
     </div>
-</body>
-<script src="<%=request.getContextPath()%>/js/jquery-3.2.js"></script>
-<script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-3.2.js"></script>
+<script type="text/javascript">
 
-    $('#login-button').click(function (event) {
-        $('#errorInfo').html("");
-        var studentid_ = $('#studentid').val();
-        var password_  =$('#password').val();
-        if(studentid_.length == 0 || password_.length == 0) {
-            $('#errorInfo').html("请输入学号或密码！");
-            return false;
-        }
-
-        var user_ = {"studentid":studentid_,"password":password_};
-        var jsonData = JSON.stringify(user_);
-        var flag = "";
-        $.ajax({
-            type:"POST",
-            url:"checkLogin.do",
-            async:false,
-            dataType:"json",
-            contentType:"application/json;charset=UTF-8",
-            data:jsonData,
-            success:function (msg) {
-                flag = msg;
+    $(function() {
+        $('#login-button').click(function (event) {
+            $('#errorInfo').html("");
+            var studentid_ = $('#studentid').val();
+            var password_ = $('#password').val();
+            if (studentid_.length == 0 || password_.length == 0) {
+                $('#errorInfo').html("学号或密码不能为空！");
+                return false;
             }
+
+            var user_ = {"studentid": studentid_, "password": password_};
+            var jsonData = JSON.stringify(user_);
+            $.ajax({
+                type: "POST",
+                url: "/users/sessions",
+                async: false,
+                dataType: "json",
+                contentType: "application/json;charset=UTF-8",
+                data: jsonData,
+                success: function (result) {
+                    if (result.resultCode == 200) {
+                        event.preventDefault();
+                        location.href = "home.do";
+                    } else {
+                        event.preventDefault();
+                        $('#errorInfo').html(result.message);
+                    }
+                }
+            });
         });
-        if("0" == flag) {
-            event.preventDefault();
-            location.href = "home.do";
-        }else {
-            event.preventDefault();
-            $('#errorInfo').html("学号或密码输入错误！");
-        }
-    });
+    })
 </script>
+</body>
 </html>

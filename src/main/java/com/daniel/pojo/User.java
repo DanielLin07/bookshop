@@ -74,4 +74,9 @@ public class User {
     public void setMajor(String major) {
         this.major = major;
     }
+
+    @Override
+    public String toString() {
+        return "studentid:"+this.studentid+" ,name:"+this.name;
+    }
 }
