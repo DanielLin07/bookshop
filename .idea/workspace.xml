@@ -7,110 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8b6b3ae-4cfe-4646-8652-f4f30758ad28" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_simple_1_7_25.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/mybookshop_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/mybookshop_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybookshop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mybookshop.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/mybookshop_war2/mybookshop_war.war" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mybookshop_war2/mybookshop_war.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/daniel/aspect/ExceptionAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daniel/aspect/ExceptionAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/daniel/common/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daniel/common/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/daniel/common/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daniel/common/Response.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/daniel/common/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daniel/common/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/daniel/common/ResultGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daniel/common/ResultGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/daniel/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daniel/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/daniel/controller/ForeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daniel/controller/ForeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/daniel/controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daniel/controller/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/daniel/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daniel/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/daniel/dao/BookDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daniel/dao/BookDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/daniel/dao/BookImageDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daniel/dao/BookImageDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/daniel/dao/CategoryDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daniel/dao/CategoryDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/daniel/interceptor/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daniel/interceptor/LoginInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/daniel/pojo/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daniel/pojo/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/daniel/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daniel/pojo/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/daniel/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daniel/service/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/daniel/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daniel/service/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/daniel/service/impl/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daniel/service/impl/BookServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/daniel/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daniel/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/Book.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/Book.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/bookDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/bookDetail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/bookStore.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/bookStore.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/editBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/editBook.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/myBookshelf.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/myBookshelf.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/uploadSell.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/uploadSell.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/book.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/book.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/bookDetail.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/bookDetail.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/myBookshelf.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/myBookshelf.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/reset.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/myBookshelf.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/myBookshelf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/daniel/TestLucene.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/daniel/controller/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/daniel/controller/BookController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/daniel/controller/ForeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/daniel/controller/ForeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/daniel/controller/LoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/daniel/controller/SearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/daniel/controller/SearchController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/daniel/pojo/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/daniel/pojo/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/daniel/pojo/BookInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/daniel/pojo/UploadedImageFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/daniel/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/daniel/pojo/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/daniel/redis/RedisBaseTakes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/daniel/redis/impl/SeeBookRedisTakes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/daniel/service/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/daniel/service/BookService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/daniel/service/impl/BookServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/daniel/service/impl/BookServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/daniel/utils/UserUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/Book.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/Book.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring-mybatis.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring-redis.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/springMVC.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/com/daniel/TestLucene.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/com/daniel/controller/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/com/daniel/controller/BookController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/com/daniel/controller/ForeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/com/daniel/controller/ForeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/com/daniel/controller/LoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/com/daniel/controller/SearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/com/daniel/controller/SearchController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/com/daniel/pojo/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/com/daniel/pojo/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/com/daniel/pojo/BookInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/com/daniel/pojo/UploadedImageFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/com/daniel/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/com/daniel/pojo/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/com/daniel/redis/RedisBaseTakes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/com/daniel/redis/impl/SeeBookRedisTakes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/com/daniel/service/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/com/daniel/service/BookService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/com/daniel/service/impl/BookServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/com/daniel/service/impl/BookServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/com/daniel/utils/UserUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/mapper/Book.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/mapper/Book.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/spring-mybatis.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/spring-redis.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/WEB-INF/classes/springMVC.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/WEB-INF/jsp/bookDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/mybookshop/WEB-INF/jsp/bookDetail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/WEB-INF/jsp/bookStore.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/mybookshop/WEB-INF/jsp/bookStore.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/WEB-INF/jsp/editBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/mybookshop/WEB-INF/jsp/editBook.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/WEB-INF/jsp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/mybookshop/WEB-INF/jsp/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/mybookshop/WEB-INF/jsp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/WEB-INF/jsp/myBookShelf.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/mybookshop/WEB-INF/jsp/myBookShelf.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/WEB-INF/jsp/uploadSell.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/mybookshop/WEB-INF/jsp/uploadSell.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/WEB-INF/lib/slf4j-api-1.7.12.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/mybookshop/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/css/book.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/mybookshop/css/book.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/css/bookDetail.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/mybookshop/css/bookDetail.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/mybookshop/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/css/myBookshelf.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/mybookshop/css/myBookshelf.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/css/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/mybookshop/css/reset.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/img/book-list/article/85.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/img/book-list/article/86.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mybookshop/js/myBookshelf.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/mybookshop/js/myBookshelf.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -305,11 +202,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
-    <option name="width" value="1940" />
-    <option name="height" value="1050" />
+    <option name="width" value="1939" />
+    <option name="height" value="1049" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -602,12 +499,12 @@
       <workItem from="1526953938447" duration="5056000" />
       <workItem from="1526963006673" duration="2086000" />
       <workItem from="1526965933763" duration="19372000" />
-      <workItem from="1527056091782" duration="10110000" />
+      <workItem from="1527056091782" duration="10720000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="244052000" />
+    <option name="totallyTimeSpent" value="244662000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -619,7 +516,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
