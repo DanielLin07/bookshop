@@ -30,7 +30,7 @@
     <div class="nav-info">
         <a href="#" class="username">${user.getName()}</a>
         <a href="/myBookshelf.do" class="bookshelf">||&nbsp;&nbsp;&nbsp;我的书架</a>
-        <a href="/users/logout.do" class="logout">[ 退 出 ]</a>
+        <a href="#" class="logout">[ 退 出 ]</a>
     </div> <!-- nav-info-end -->
 </nav>
 
@@ -100,6 +100,7 @@
 </footer>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-3.2.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.form.js"></script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/js/session.js"></script>
 <script type="text/javascript">
 
     window.onload = function () {

@@ -56,9 +56,9 @@ public class UserController {
      * @param request 用于获取session中的User对象
      * @return 登出后跳转至登录界面
      */
-    @RequestMapping("/logout.do")
-    public ModelAndView logout(HttpServletRequest request) {
+    @RequestMapping(value = "/sessions",method = RequestMethod.DELETE)
+    public Result logout(HttpServletRequest request) {
         request.getSession().removeAttribute("user");
-        return new ModelAndView("login");
+        return ResultGenerator.genSuccessResult();
     }
 }

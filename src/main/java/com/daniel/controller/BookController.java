@@ -176,7 +176,7 @@ public class BookController {
      * @param bookIds 要删除的图书ID数组
      */
     @RequestMapping(value = "",method = RequestMethod.DELETE)
-    public void deleteBook(HttpServletRequest request, @RequestParam(value = "bookIds", required = false) String[] bookIds){
+    public Result deleteBook(HttpServletRequest request, @RequestParam(value = "bookIds", required = false) String[] bookIds){
 
         if (bookIds != null) {
             // 遍历每个ID
@@ -198,6 +198,9 @@ public class BookController {
                 bookService.delete(id);
             }
             log.info("request: book/delete , bookIds: " + Arrays.toString(bookIds));
+            return ResultGenerator.genSuccessResult();
+        }else {
+            return ResultGenerator.genFailResult("删除失败！未选中图书");
         }
     }
 }

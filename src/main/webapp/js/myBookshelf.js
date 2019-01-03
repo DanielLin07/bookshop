@@ -66,10 +66,13 @@ $(function(){
                 async:false,
                 traditional:true,
                 data:{"bookIds":bookIdArr,_method:'DELETE'},
-                success:function (msg) {
-                    flag = msg;
-                    alert("删除成功！");
-                    location.href = "myBookshelf.do";
+                success:function (result) {
+                    if (result.resultCode == 200){
+                        alert("删除成功！");
+                        location.href = "myBookshelf.do";
+                    } else {
+                        alert(result.message);
+                    }
                 }
             });
         }

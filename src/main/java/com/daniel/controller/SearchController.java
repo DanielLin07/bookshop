@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.wltea.analyzer.lucene.IKAnalyzer;
 
-import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +30,7 @@ public class SearchController {
     private BookService bookService;
 
     @RequestMapping("searchBook.do")
-    public ModelAndView searchBook(HttpServletRequest request,Book book) throws IOException, ParseException {
+    public ModelAndView searchBook(Book book) throws IOException, ParseException {
 
         ModelAndView mav = new ModelAndView("searchBook");
 

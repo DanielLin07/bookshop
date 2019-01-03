@@ -13,9 +13,9 @@
 <nav class="navbar">
     <div class="nav-menu">
         <ul class="menu">
-            <li><a class="active" href="home.do">首页</a></li>
-            <li><a href="goBookStore.do">书籍良品</a></li>
-            <li><a href="goAskBookStore.do">求书区</a></li>
+            <li><a class="active" href="/home.do">首页</a></li>
+            <li><a href="/goBookStore.do">书籍良品</a></li>
+            <li><a href="/goAskBookStore.do">求书区</a></li>
             <li><a href="#">服务区</a></li>
         </ul>
     </div><!-- nav-menu -->
@@ -29,8 +29,8 @@
 
     <div class="nav-info">
         <a href="#" class="username">${user.getName()}</a>
-        <a href="myBookshelf.do" class="bookshelf">||&nbsp;&nbsp;&nbsp;我的书架</a>
-        <a href="logout.do" class="logout">[ 退 出 ]</a>
+        <a href="/myBookshelf.do" class="bookshelf">||&nbsp;&nbsp;&nbsp;我的书架</a>
+        <a href="#" class="logout">[ 退 出 ]</a>
     </div> <!-- nav-info-end -->
 </nav>
 <div class="titleName">
@@ -67,6 +67,7 @@
 </body>
 <script src="<%=request.getContextPath()%>/js/jquery-3.2.js"></script>
 <script src="<%=request.getContextPath()%>/js/jquery.form.js"></script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/js/session.js"></script>
 <script>
 
     $("#book-submit").click(function (event){
