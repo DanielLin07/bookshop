@@ -3,15 +3,15 @@
 
  Source Server         : demo
  Source Server Type    : MySQL
- Source Server Version : 50719
+ Source Server Version : 50722
  Source Host           : localhost:3306
  Source Schema         : bookshop
 
  Target Server Type    : MySQL
- Target Server Version : 50719
+ Target Server Version : 50722
  File Encoding         : 65001
 
- Date: 14/04/2018 00:29:43
+ Date: 19/07/2018 20:56:32
 */
 
 SET NAMES utf8mb4;
@@ -37,11 +37,15 @@ CREATE TABLE `book`  (
   `description` text CHARACTER SET utf8 COLLATE utf8_general_ci,
   `date` datetime(0) DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
+  UNIQUE INDEX `index_id`(`id`) USING BTREE,
   INDEX `fk_book_category`(`cid`) USING BTREE,
   INDEX `fk_book_user`(`uid`) USING BTREE,
+  INDEX `index_bookname`(`name`) USING BTREE,
+  INDEX `index_cid`(`cid`) USING BTREE,
+  INDEX `index_uid`(`uid`) USING BTREE,
   CONSTRAINT `fk_book_category` FOREIGN KEY (`cid`) REFERENCES `category` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   CONSTRAINT `fk_book_user` FOREIGN KEY (`uid`) REFERENCES `user` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 90 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 89 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of book
@@ -62,11 +66,11 @@ INSERT INTO `book` VALUES (13, '史记', 2, 1, 42.00, 99.00, 1, '司马迁', '�
 INSERT INTO `book` VALUES (14, '朱镕基答记者问', 3, 1, 9.00, 59.00, 1, '《朱镕基答记者问》编辑组', '人民出版社', '平装', 5.0, '2009-08', '《朱镕基答记者问》编辑组 著 / 人民出版社 / 2009-08 / 平装', '2018-04-12 08:40:01');
 INSERT INTO `book` VALUES (15, '邓小平时代', 3, 1, 32.00, 40.00, 1, '傅高义', '生活·读书·新知三联书店', '平装', 8.0, '2013-01', '傅高义 著 / 生活·读书·新知三联书店 / 2013-01 / 平装', '2018-04-12 08:42:11');
 INSERT INTO `book` VALUES (16, '天才在左 疯子在右', 4, 1, 17.80, 36.00, 2, '高铭', '武汉大学出版社', '平装', 8.0, '2010-02', '高铭 著 / 武汉大学出版社 / 2010-02 / 平装', '2018-04-12 08:42:24');
-INSERT INTO `book` VALUES (17, '蔡康永的说话之道', 4, 1, 8.80, 29.00, 1, '蔡康永', '沈阳出版社', '平装', 6.0, '2010-10', '蔡康永 著 / 沈阳出版社 / 2010-10 / 平装', '2018-04-12 08:44:29');
+INSERT INTO `book` VALUES (17, '蔡康永的说话之道', 4, 1, 8.80, 29.00, 1, '蔡康永', '沈阳出版社', '平装', 7.4, '2010-10', '蔡康永 著 / 沈阳出版社 / 2010-10 / 平装', '2018-04-12 08:44:29');
 INSERT INTO `book` VALUES (18, '货币战争', 5, 1, 12.00, 34.00, 1, '宋鸿兵', '中信出版社', '平装', 6.0, '2007-06', '宋鸿兵 著 / 中信出版社 / 2007-06 / 平装', '2018-04-12 08:46:34');
 INSERT INTO `book` VALUES (19, '菊与刀', 5, 1, 5.00, 19.00, 2, '鲁思·本尼迪克特', '商务印书馆', '平装', 7.0, '1990-06', '鲁思·本尼迪克特 著 / 商务印书馆 / 1990-06 / 平装', '2018-04-12 08:47:40');
 INSERT INTO `book` VALUES (20, '科比：黄金年代', 6, 1, 22.00, 49.00, 1, '张佳玮', '金城出版社', '平装', 7.0, '2016-06', '张佳玮 著 / 金城出版社 / 2016-06 / 平装', '2018-04-12 08:44:46');
-INSERT INTO `book` VALUES (21, '梅者如西', 6, 1, 12.00, 34.00, 1, '冯逸明', '北京时代华文书局', '平装', 6.0, '2017-07', '冯逸明 著 / 北京时代华文书局 / 2017-07 / 平装', '2018-04-12 08:49:52');
+INSERT INTO `book` VALUES (21, '梅者如西', 6, 1, 12.00, 34.00, 1, '冯逸明', '北京时代华文书局', '平装', 7.0, '2017-07', '冯逸明 著 / 北京时代华文书局 / 2017-07 / 平装', '2018-04-12 08:49:52');
 INSERT INTO `book` VALUES (62, '精通Spring4.x', 7, 1, 30.00, 79.00, 1, '陈雄华', '电子工业出版社', '4', 9.9, '2016-11', '保证正版', '2018-04-12 08:26:16');
 INSERT INTO `book` VALUES (64, '我们仨', 2, 1, 10.00, 18.80, 3, '杨绛', '生活·读书·新知三联书店', '1', 9.0, '2003-07', '杨绛的书', '2018-04-12 08:26:21');
 INSERT INTO `book` VALUES (65, '史蒂夫·乔布斯传', 2, 1, 20.00, 68.00, 3, '沃尔特·艾萨克森', '中信出版社', '1', 8.0, '2011-10', '乔布斯大神', '2018-04-12 08:26:24');
@@ -79,7 +83,7 @@ INSERT INTO `book` VALUES (71, '断舍离', 4, 1, 10.00, 32.00, 3, '山下英子
 INSERT INTO `book` VALUES (72, '人性的弱点全集', 4, 1, 10.00, 25.00, 3, '戴尔·卡内基', '中国发展出版社', '2', 8.0, '2008-01', '好书啊', '2018-04-12 08:26:45');
 INSERT INTO `book` VALUES (73, '人类简史：从动物到上帝', 5, 1, 24.00, 68.00, 3, '尤瓦尔·赫拉利', '中信出版社', '1', 9.0, '2014-11', '毕业便宜甩', '2018-04-12 08:26:47');
 INSERT INTO `book` VALUES (74, '丑陋的中国人', 5, 1, 6.00, 22.00, 3, '柏杨', '古吴轩出版社', '1', 7.0, '2006-02', '老书了', '2018-04-12 08:26:49');
-INSERT INTO `book` VALUES (75, '郎咸平说：我们的日子为什么这么难', 5, 1, 10.00, 32.00, 3, '郎咸平', '东方出版社', '1', 6.0, '2010-09', '我也不知道我们的日子为什么这么难', '2018-04-12 08:26:52');
+INSERT INTO `book` VALUES (75, '郎咸平说', 5, 1, 10.00, 32.00, 3, '郎咸平', '东方出版社', '1', 6.0, '2010-09', '我也不知道我们的日子为什么这么难', '2018-04-12 08:26:52');
 INSERT INTO `book` VALUES (76, '孩子你慢慢来', 6, 1, 10.00, 28.00, 3, '龙应台', '生活·读书·新知三联书店', '1', 9.0, '2009-12', '好书推荐', '2018-04-12 08:26:55');
 INSERT INTO `book` VALUES (77, '男人这东西', 6, 1, 8.00, 28.00, 3, '渡边淳一', '作家出版社', '1', 7.0, '2010-03', '渡边大神的书', '2018-04-12 08:26:58');
 INSERT INTO `book` VALUES (78, '荒野生存', 6, 1, 19.00, 39.00, 3, '乔恩·克拉考尔', '中国人民大学出版社', '1', 7.0, '2008-08', '已改编成同名电影', '2018-04-12 08:27:02');
@@ -105,7 +109,7 @@ CREATE TABLE `bookimage`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `fk_bookimage_book`(`bid`) USING BTREE,
   CONSTRAINT `fk_bookimage_book` FOREIGN KEY (`bid`) REFERENCES `book` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 88 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 85 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of bookimage
