@@ -1,5 +1,5 @@
 # 简介
-这是一个功能简单，使用Spring + Spring MVC + Mybatis搭建的二手书交易系统
+这是一个功能简单，使用Spring + Spring MVC + Mybatis搭建的二手书交易系统，本项目的[前端](https://github.com/chieminchan/Bookshop)
 
 # 简单体验
 - 学号：1505119  密码：675844
@@ -37,3 +37,8 @@
 ![bookshelf](https://github.com/DanielLin07/bookshop/blob/master/Screenshots/myBookshelf.jpg)
 ## 上传图书
 ![upload](https://github.com/DanielLin07/bookshop/blob/master/Screenshots/upload.jpg)
+
+# 贡献者
+<a href="https://github.com/linw7">
+    <img src="https://avatars0.githubusercontent.com/u/25948820?s=400&v=4" width="50px">
+</a> 
