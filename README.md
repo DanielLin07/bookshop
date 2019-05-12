@@ -39,6 +39,6 @@
 ![upload](https://github.com/DanielLin07/bookshop/blob/master/Screenshots/upload.jpg)
 
 # 贡献者
-<a href="https://github.com/linw7">
+<a href="https://github.com/chieminchan">
     <img src="https://avatars0.githubusercontent.com/u/25948820?s=400&v=4" width="50px">
 </a> 
