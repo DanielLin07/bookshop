@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.daniel.dao.UserDAO">
+<mapper namespace="com.daniellin07.bookshop.dao.UserDAO">
 
     <select id="get" parameterType="_int" resultType="User">
         select * from user where id= #{id}
