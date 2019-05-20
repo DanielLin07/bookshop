@@ -1,35 +1,56 @@
 package com.daniellin07.bookshop.common;
 
-import java.io.Serializable;
+/**
+ * 响应结果封装
+ *
+ * @author DanielLin07
+ * @date 2018/11/10 13:59
+ */
+public class Result<T> {
 
-public class Result<T> implements Serializable {
-    private static final long serialVersionUID = 1L;
-    private int resultCode;
-    private String message;
+    /**
+     * 响应结果码
+     */
+    private int code;
+
+    /**
+     * 响应结果信息
+     */
+    private String msg;
+
+    /**
+     * 响应数据
+     */
     private T data;
 
     public Result() {
     }
 
-    public Result(int resultCode, String message) {
-        this.resultCode = resultCode;
-        this.message = message;
+    public Result(int code, String msg) {
+        this.code = code;
+        this.msg = msg;
     }
 
-    public int getResultCode() {
-        return resultCode;
+    public Result(int code, String msg, T data) {
+        this.code = code;
+        this.msg = msg;
+        this.data = data;
     }
 
-    public void setResultCode(int resultCode) {
-        this.resultCode = resultCode;
+    public int getCode() {
+        return code;
     }
 
-    public String getMessage() {
-        return message;
+    public void setCode(int code) {
+        this.code = code;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
     }
 
     public T getData() {
@@ -43,10 +64,9 @@ public class Result<T> implements Serializable {
     @Override
     public String toString() {
         return "Result{" +
-                "resultCode=" + resultCode +
-                ", message='" + message + '\'' +
-                ", data={" + data.toString() + "}" +
+                "code=" + code +
+                ", msg='" + msg + '\'' +
+                ", data=" + data +
                 '}';
     }
-
 }
