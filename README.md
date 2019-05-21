@@ -17,13 +17,13 @@
   - 修改jdbc.properties文件配置，同时配置Tomcat
   - 开始运行，访问http://localhost:8080
 
-## 目前实现的功能有：
+## 实现功能
   - 登录
   - 上传二手图书
   - 编辑二手图手
   - 图书分页展示
 
-## 页面DEMO展示：
+## 页面展示
 ### 登录
 ![login](https://github.com/DanielLin07/bookshop/blob/master/Screenshots/login.jpg)
 ### 首页
