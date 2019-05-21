@@ -2,6 +2,8 @@ package com.daniellin07.bookshop.entity;
 
 import lombok.Data;
 
+import java.util.Date;
+
 /**
  * 用户实体
  *
@@ -13,18 +15,24 @@ public class User {
 
     private int id;
 
-    private String studentid;
-
-    private String name;
+    private String username;
 
     private String password;
 
-    private char sex;
+    private String salt;
 
-    private String tel;
+    private Integer sex;
 
-    private String address;
+    private String phone;
 
-    private String major;
+    private String avatar;
+
+    private Integer status;
+
+    private Date lastLoginTime;
+
+    private Date createTime;
+
+    private Date updateTime;
 
 }
