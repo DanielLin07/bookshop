@@ -31,29 +31,20 @@
 
 ## 页面展示
 
-### 登录
-
-![login](https://github.com/DanielLin07/bookshop/blob/master/Screenshots/login.jpg)
-
-### 首页
-
-![index](https://github.com/DanielLin07/bookshop/blob/master/Screenshots/index.jpg)
-
-### 图书页
-
-![index2](https://github.com/DanielLin07/bookshop/blob/master/Screenshots/home.jpg)
-
-### 图书详情
-
-![bookDetail](https://github.com/DanielLin07/bookshop/blob/master/Screenshots/bookDetail.jpg)
-
-### 个人书架
-
-![bookshelf](https://github.com/DanielLin07/bookshop/blob/master/Screenshots/myBookshelf.jpg)
-
-### 上传图书
-
-![upload](https://github.com/DanielLin07/bookshop/blob/master/Screenshots/upload.jpg)
+<table>
+    <tr>
+        <td><img src="https://github.com/DanielLin07/bookshop/blob/master/Screenshots/login.jpg"/></td>
+        <td><img src="https://github.com/DanielLin07/bookshop/blob/master/Screenshots/index.jpg"/></td>
+    </tr>
+    <tr>
+        <td><img src="https://github.com/DanielLin07/bookshop/blob/master/Screenshots/home.jpg"/></td>
+        <td><img src="https://github.com/DanielLin07/bookshop/blob/master/Screenshots/bookDetail.jpg"/></td>
+    </tr>
+    <tr>
+        <td><img src="https://github.com/DanielLin07/bookshop/blob/master/Screenshots/myBookshelf.jpg"/></td>
+        <td><img src="https://github.com/DanielLin07/bookshop/blob/master/Screenshots/upload.jpg"/></td>
+    </tr>
+</table>
 
 ## 贡献者
 
