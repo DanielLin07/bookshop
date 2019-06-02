@@ -33,7 +33,7 @@ mybatis:
   # Mapper映射文件的位置
   mapper-locations: classpath:mapper/*.xml
   # 包下所有类的别名，配置别名为了在对象映射文件中接收参数类型和返回参数类型时省略包路径
-  type-aliases-package: com.daniellin07.bookshop.entity
+  type-aliases-package: com.daniellin07.bookshop.domain
 
 # 七牛云
 qiniu:

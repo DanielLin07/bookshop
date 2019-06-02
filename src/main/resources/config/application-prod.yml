@@ -3,7 +3,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/seckill?useUnicode=true&useSSL=false&useAffectedRows=true&characterEncoding=utf8
     username: root
-    password: 675844
+    password:
     driver-class-name: com.mysql.jdbc.Driver
 
     druid:

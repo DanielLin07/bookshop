@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.daniellin07</groupId>
-    <artifactId>mybookshop</artifactId>
+    <artifactId>bookshop</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>myBookshop</name>
-    <description>myBookshop project for Spring Boot</description>
+    <name>bookshop</name>
+    <description>bookshop project for Spring Boot</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -28,6 +28,8 @@
         <mybatisplus.version>3.1.0</mybatisplus.version>
         <druid.version>1.1.10</druid.version>
         <hutool.version>[4.1.12,)</hutool.version>
+        <guava.version>27.1-jre</guava.version>
+        <jjwt.version>0.9.1</jjwt.version>
         <log4j.version>1.2.17</log4j.version>
     </properties>
 
@@ -64,6 +66,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
+        <!--Spring-Boot：集成Spring Security-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
         <!--Spring-Boot：集成参数校验工具Validation-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -99,6 +106,13 @@
             <version>${mybatisplus.version}</version>
         </dependency>
 
+        <!--鉴权验证：JWT-->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>${jjwt.version}</version>
+        </dependency>
+
         <!--JSON工具：FastJSON-->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -118,6 +132,12 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
         </dependency>
+        <!--通用工具：guava-->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
         <!--通用工具：Lombok插件-->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -129,13 +149,6 @@
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>${hutool.version}</version>
-        </dependency>
-
-        <!--权限管理工具：Shiro-->
-        <dependency>
-            <groupId>org.apache.shiro</groupId>
-            <artifactId>shiro-core</artifactId>
-            <version>1.4.0</version>
         </dependency>
 
         <!--日志工具：log4j-->
