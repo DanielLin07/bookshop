@@ -16,7 +16,7 @@ public enum CodeMsg {
     USERNAME_EMPTY(500212, "用户名不能为空"),
     USERNAME_ERROR(500213, "用户名格式错误"),
     USERNAME_NOT_EXIST(500214, "用户名不存在"),
-    PASSWORD_ERROR(500215, "密码错误"),
+    PASSWORD_ERROR(500215, "用户密码错误"),
     ACCOUNT_IS_DISABLED(500216, "账号已停用，请联系管理员"),
 
     /**

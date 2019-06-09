@@ -5,7 +5,6 @@ import com.daniellin07.bookshop.common.result.Result;
 import com.daniellin07.bookshop.module.system.domain.Book;
 import com.daniellin07.bookshop.module.system.domain.Category;
 import com.daniellin07.bookshop.module.system.domain.User;
-import com.daniellin07.bookshop.module.system.service.BookImageService;
 import com.daniellin07.bookshop.module.system.service.BookService;
 import com.daniellin07.bookshop.module.system.service.CategoryService;
 import com.daniellin07.bookshop.module.system.service.UserService;

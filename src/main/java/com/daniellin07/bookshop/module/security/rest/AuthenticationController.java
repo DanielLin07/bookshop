@@ -41,7 +41,7 @@ public class AuthenticationController {
     public Result login(@Validated @RequestBody AuthorizationUser authorizationUser) {
         final JwtUser jwtUser = (JwtUser) userDetailsService.loadUserByUsername(authorizationUser.getUsername());
 
-        if (!jwtUser.getPassword().equals(SecurityUtil.encryptPassword(authorizationUser.getPassword()))) {
+        if (!SecurityUtil.matchPassword(authorizationUser.getPassword(), jwtUser.getPassword())) {
             return ResultBuilder.build(CodeMsg.PASSWORD_ERROR);
         }
 

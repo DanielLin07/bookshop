@@ -12,26 +12,28 @@ import java.util.UUID;
  */
 public class SecurityUtil {
 
-    /**
-     * 加密算法
-     */
-    private static final String ALGORITHM_NAME = "MD5";
-
-    /**
-     * 加密次数
-     */
-    private static final int HASH_ITERATIONS = 2;
+    private SecurityUtil() {
+    }
 
     /**
      * 生成加密后的密码
      *
      * @param password 加密前的密码
-     * @param username 用户名，用于与盐一起使用
-     * @param salt     盐
      * @return 加密后的密码
      */
     public static String encryptPassword(String password) {
         return new BCryptPasswordEncoder().encode(password);
+    }
+
+    /**
+     * 验证密码
+     *
+     * @param rawPassword     用户密码
+     * @param encodedPassword 加密后的密码
+     * @return 是否一致
+     */
+    public static boolean matchPassword(String rawPassword, String encodedPassword) {
+        return new BCryptPasswordEncoder().matches(rawPassword, encodedPassword);
     }
 
     /**
@@ -42,4 +44,5 @@ public class SecurityUtil {
     public static String randomUUID() {
         return UUID.randomUUID().toString().replaceAll("-", "");
     }
+
 }
