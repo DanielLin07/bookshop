@@ -20,7 +20,7 @@
   - 创建一个名为bookshop的数据库，将bookshop.sql导入
   - 打开IntelliJ IDEA，将项目导入
   - 修改jdbc.properties文件配置，同时配置Tomcat
-  - 开始运行，访问http://localhost:8080
+  - 开始运行，访问http://localhost:8080/home.do
 
 ## 实现功能
 
