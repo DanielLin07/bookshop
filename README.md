@@ -8,14 +8,14 @@
 
 ## 快速上手
 
-### 1.运行环境
+### 1. 运行环境
 
   - IDE：IntelliJ IDEA
   - 项目构建工具：Maven
   - 数据库：MySQL
   - Tomcat：Tomcat 8.0.47
 
-### 2.初始化项目
+### 2. 初始化项目
 
   - 创建一个名为bookshop的数据库，将bookshop.sql导入
   - 打开IntelliJ IDEA，将项目导入
