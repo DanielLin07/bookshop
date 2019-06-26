@@ -16,15 +16,13 @@ import java.io.Serializable;
  * @date 2019/5/26 14:51
  */
 @Component
-public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint, Serializable {
-
-    private static final long serialVersionUID = -8970718410437077606L;
+public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint {
 
     @Override
     public void commence(HttpServletRequest request,
                          HttpServletResponse response,
                          AuthenticationException authException) throws IOException {
-        // 当用户尝试访问安全的REST资源而不提供任何凭据时，将调用此方法发送401 响应
+        // 当用户尝试访问安全的REST资源而不提供任何凭据时，将调用此方法发送401响应
         response.sendError(HttpServletResponse.SC_UNAUTHORIZED,
                 authException == null ? "Unauthorized" : authException.getMessage());
     }

@@ -11,7 +11,7 @@ public enum UserStatusEnum {
     /**
      * 锁定
      */
-    LOCKED("lock", 0),
+    LOCKED("locked", 0),
 
     NORMAL("normal", 1),
 

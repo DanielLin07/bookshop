@@ -80,7 +80,7 @@ public class JwtTokenUtil {
     public Boolean validateToken(String token, UserDetails userDetails) {
         JwtUser user = (JwtUser) userDetails;
         final String username = getUsernameFromToken(token);
-        // 如果token存在，且
+        // 如果token存在且没有过期
         return (username.equals(user.getUsername())
                 && !isTokenExpired(token));
     }
@@ -102,7 +102,6 @@ public class JwtTokenUtil {
     }
 
     private Boolean ignoreTokenExpiration(String token) {
-        // here you specify tokens, for that the expiration is ignored
         return false;
     }
 

@@ -35,6 +35,7 @@ public class JwtAuthorizationTokenFilter extends OncePerRequestFilter {
     private UserDetailsService userDetailsService;
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
+
     @Value("${jwt.header}")
     private String tokenHeader;
 
@@ -49,7 +50,7 @@ public class JwtAuthorizationTokenFilter extends OncePerRequestFilter {
         String username = null;
         String authToken = null;
         if (requestHeader != null && requestHeader.startsWith(REQUEST_HEADER_PATTERN)) {
-            authToken = requestHeader.substring(7);
+            authToken = requestHeader.substring(REQUEST_HEADER_PATTERN.length());
             try {
                 username = jwtTokenUtil.getUsernameFromToken(authToken);
             } catch (ExpiredJwtException e) {

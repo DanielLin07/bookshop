@@ -56,6 +56,11 @@ public class AuthenticationController {
         return ResultBuilder.build(new AuthenticationInfo(token, jwtUser));
     }
 
+    @PostMapping(value = "/register")
+    public Result register(@Validated @RequestBody AuthorizationUser authorizationUser) {
+        return ResultBuilder.build(CodeMsg.SUCCESS);
+    }
+
     @GetMapping(value = "/info")
     public Result getUserInfo() {
         UserDetails userDetails = SecurityContextUtil.getUserDetails();
