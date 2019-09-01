@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.daniellin07.bookshop.module.system.dao.UserDAO">
+
+    <resultMap id="BaseResult" type="User">
+        <id column="id" property="id" jdbcType="BIGINT" />
+        <result column="username" property="username" jdbcType="VARCHAR" />
+        <result column="password" property="password" jdbcType="VARCHAR" />
+        <result column="salt" property="salt" jdbcType="VARCHAR" />
+        <result column="sex" property="sex" jdbcType="TINYINT" />
+        <result column="mobile" property="mobile" jdbcType="VARCHAR" />
+        <result column="email" property="email" jdbcType="VARCHAR" />
+        <result column="avatar" property="avatar" jdbcType="VARCHAR" />
+        <result column="status" property="status" jdbcType="TINYINT" />
+        <result column="last_login_time" property="lastLoginTime" jdbcType="TIMESTAMP" />
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    </resultMap>
+
+    <select id="findById" parameterType="Long" resultMap="BaseResult">
+        SELECT *
+        FROM t_bookshop_user
+        where id = #{id}
+    </select>
+
+    <select id="findByUsername" resultMap="BaseResult">
+        SELECT *
+        FROM t_bookshop_user
+        where username = #{username}
+    </select>
+
+    <select id="findByEmail" resultMap="BaseResult">
+        SELECT *
+        FROM t_bookshop_user
+        where email = #{email}
+    </select>
+
+    <select id="findByMobile" resultMap="BaseResult">
+        SELECT *
+        FROM t_bookshop_user
+        where mobile = #{mobile}
+    </select>
+
+</mapper>

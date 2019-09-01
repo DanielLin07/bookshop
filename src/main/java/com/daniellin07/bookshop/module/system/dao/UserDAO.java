@@ -1,5 +1,6 @@
 package com.daniellin07.bookshop.module.system.dao;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.daniellin07.bookshop.module.system.domain.User;
 
 /**
@@ -8,7 +9,7 @@ import com.daniellin07.bookshop.module.system.domain.User;
  * @author DanielLin07
  * @date 2019/6/1 11:37
  */
-public interface UserDAO {
+public interface UserDAO extends BaseMapper<User> {
 
     User findById(long id);
 
@@ -19,9 +20,4 @@ public interface UserDAO {
     User findByMobile(String mobile);
 
     void update(User user);
-
-    int checkPassword(User user);
-
-    User getByStudentid(String studentid);
-
 }

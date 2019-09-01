@@ -9,6 +9,8 @@ import com.daniellin07.bookshop.module.security.domain.JwtUser;
 import com.daniellin07.bookshop.module.security.util.JwtTokenUtil;
 import com.daniellin07.bookshop.module.security.util.SecurityContextUtil;
 import com.daniellin07.bookshop.module.security.util.SecurityUtil;
+import com.daniellin07.bookshop.module.system.domain.User;
+import com.daniellin07.bookshop.module.system.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -36,6 +38,8 @@ public class AuthenticationController {
     @Autowired
     @Qualifier("jwtUserDetailsService")
     private UserDetailsService userDetailsService;
+    @Autowired
+    private UserService userService;
 
     @PostMapping(value = "/login")
     public Result login(@Validated @RequestBody AuthorizationUser authorizationUser) {
@@ -57,7 +61,10 @@ public class AuthenticationController {
     }
 
     @PostMapping(value = "/register")
-    public Result register(@Validated @RequestBody AuthorizationUser authorizationUser) {
+    public Result register(@Validated @RequestBody User user) {
+        if (!userService.register(user)) {
+            return ResultBuilder.build(CodeMsg.BAD_REQUEST);
+        }
         return ResultBuilder.build(CodeMsg.SUCCESS);
     }
 

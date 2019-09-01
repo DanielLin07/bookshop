@@ -25,7 +25,7 @@ public class JwtUserDetailsServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) {
         User user;
-        if (ValidateUtil.validateEamil(username)) {
+        if (ValidateUtil.validateEmail(username)) {
             user = userService.findByEmail(username);
         } else if (ValidateUtil.validateMobile(username)) {
             user = userService.findByMobile(username);

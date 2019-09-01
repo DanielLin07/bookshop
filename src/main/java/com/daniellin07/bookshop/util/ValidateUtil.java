@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * 常用的一些验证，如手机、移动号码、联通号码、电信号码、密码、座机、 邮政编码、邮箱、年龄、身份证、URL、QQ、汉字、字母、数字等
+ * 常用的一些验证，如手机、数字等
  *
  * @author DanielLin07
  * @date 2019/6/2 13:27
@@ -174,7 +174,7 @@ public class ValidateUtil {
      * @param email 邮箱（电子邮件）
      * @return boolean
      */
-    public static boolean validateEamil(final String email) {
+    public static boolean validateEmail(final String email) {
         if (StringUtils.isEmpty(email)) {
             return Boolean.FALSE;
         }

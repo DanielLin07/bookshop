@@ -1,6 +1,6 @@
 package com.daniellin07.bookshop.module.security.domain;
 
-import com.daniellin07.bookshop.common.UserStatusEnum;
+import com.daniellin07.bookshop.common.constant.UserStatusEnum;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

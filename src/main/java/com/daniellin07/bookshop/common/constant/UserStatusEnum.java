@@ -1,4 +1,4 @@
-package com.daniellin07.bookshop.common;
+package com.daniellin07.bookshop.common.constant;
 
 /**
  * 用户状态枚举类

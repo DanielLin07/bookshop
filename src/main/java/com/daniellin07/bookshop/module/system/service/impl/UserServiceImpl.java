@@ -1,13 +1,16 @@
 package com.daniellin07.bookshop.module.system.service.impl;
 
-import com.daniellin07.bookshop.common.LogConstants;
+import com.daniellin07.bookshop.common.constant.LogConstants;
 import com.daniellin07.bookshop.module.system.dao.UserDAO;
 import com.daniellin07.bookshop.module.system.domain.User;
 import com.daniellin07.bookshop.module.system.service.UserService;
+import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Date;
 
 /**
  * UserService实现类
@@ -59,18 +62,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void update(User user) {
-
-    }
-
-    @Override
-    public int checkPassword(User user) {
-        return 0;
-    }
-
-    @Override
-    public User getByStudentid(String studnetid) {
-        return userDAO.getByStudentid(studnetid);
+    public Boolean register(User user) {
+        if (user == null) {
+            return false;
+        }
+        return userDAO.insert(user) > 1;
     }
 
 }
