@@ -71,7 +71,7 @@ public class ResultBuilder {
      * @param data 响应数据
      * @return 响应Result
      */
-    public static <T> Result<T> build(T data) {
+    public static <T> Result<T> success(T data) {
         return build(CodeMsg.SUCCESS, data);
     }
 
@@ -80,8 +80,29 @@ public class ResultBuilder {
      *
      * @return 响应Result
      */
-    public static <T> Result<T> build() {
+    public static <T> Result<T> success() {
         return build(CodeMsg.SUCCESS);
+    }
+
+    /**
+     * 根据已定义的CodeMsg生成错误响应Result
+     *
+     * @param codeMsg 请求结果枚举类
+     * @return 响应Result
+     */
+    public static <T> Result<T> error(CodeMsg codeMsg) {
+        return build(codeMsg);
+    }
+
+    /**
+     * 生成错误响应Result
+     *
+     * @param code 状态码
+     * @param msg  响应信息
+     * @return 响应Result
+     */
+    public static <T> Result<T> error(Integer code, String msg) {
+        return build(code, msg);
     }
 
 }

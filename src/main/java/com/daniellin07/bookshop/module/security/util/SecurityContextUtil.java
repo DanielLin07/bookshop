@@ -1,6 +1,7 @@
 package com.daniellin07.bookshop.module.security.util;
 
 import com.daniellin07.bookshop.common.exception.GlobalException;
+import com.daniellin07.bookshop.common.result.CodeMsg;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -17,7 +18,7 @@ public class SecurityContextUtil {
         try {
             userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         } catch (Exception e) {
-            throw new GlobalException("登录状态过期");
+            throw new GlobalException(CodeMsg.ACCOUNT_IS_EXPIRED);
         }
         return userDetails;
     }

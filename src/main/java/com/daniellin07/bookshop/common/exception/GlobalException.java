@@ -1,5 +1,6 @@
 package com.daniellin07.bookshop.common.exception;
 
+import com.daniellin07.bookshop.common.result.CodeMsg;
 import lombok.Getter;
 
 /**
@@ -11,10 +12,17 @@ import lombok.Getter;
 @Getter
 public class GlobalException extends RuntimeException {
 
+    private Integer code;
+
     private String msg;
 
-    public GlobalException(String msg){
-        super(msg);
+    public GlobalException(CodeMsg codeMsg) {
+        this.msg = codeMsg.msg;
+        this.code = codeMsg.code;
+    }
+
+    public GlobalException(Integer code, String msg) {
         this.msg = msg;
+        this.code = code;
     }
 }

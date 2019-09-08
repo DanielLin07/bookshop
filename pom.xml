@@ -6,7 +6,7 @@
     <groupId>com.daniellin07</groupId>
     <artifactId>bookshop</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+<!--    <packaging>pom</packaging>-->
 
     <name>bookshop</name>
     <description>bookshop project for Spring Boot</description>
@@ -94,11 +94,6 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>${mybatisplus.version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus</artifactId>
-            <version>${mybatisplus.version}</version>
-        </dependency>
 
         <!--鉴权验证：JWT-->
         <dependency>
@@ -136,7 +131,6 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <optional>true</optional>
         </dependency>
         <!--通用工具：Hutool-->
         <dependency>

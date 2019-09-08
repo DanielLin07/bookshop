@@ -1,24 +1,19 @@
 package com.daniellin07.bookshop.module.security.rest;
 
+import com.daniellin07.bookshop.common.exception.GlobalException;
 import com.daniellin07.bookshop.common.result.CodeMsg;
 import com.daniellin07.bookshop.common.result.Result;
 import com.daniellin07.bookshop.common.result.ResultBuilder;
-import com.daniellin07.bookshop.module.security.domain.AuthenticationInfo;
 import com.daniellin07.bookshop.module.security.domain.AuthorizationUser;
-import com.daniellin07.bookshop.module.security.domain.JwtUser;
-import com.daniellin07.bookshop.module.security.util.JwtTokenUtil;
-import com.daniellin07.bookshop.module.security.util.SecurityContextUtil;
-import com.daniellin07.bookshop.module.security.util.SecurityUtil;
+import com.daniellin07.bookshop.module.security.service.AuthenticationService;
 import com.daniellin07.bookshop.module.system.domain.User;
-import com.daniellin07.bookshop.module.system.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * 权限验证用户登录控制器
@@ -34,44 +29,25 @@ public class AuthenticationController {
     @Value("${jwt.header}")
     private String tokenHeader;
     @Autowired
-    private JwtTokenUtil jwtTokenUtil;
-    @Autowired
-    @Qualifier("jwtUserDetailsService")
-    private UserDetailsService userDetailsService;
-    @Autowired
-    private UserService userService;
+    private AuthenticationService authenticationService;
 
     @PostMapping(value = "/login")
-    public Result login(@Validated @RequestBody AuthorizationUser authorizationUser) {
-        final JwtUser jwtUser = (JwtUser) userDetailsService.loadUserByUsername(authorizationUser.getUsername());
-
-        if (!SecurityUtil.matchPassword(authorizationUser.getPassword(), jwtUser.getPassword())) {
-            return ResultBuilder.build(CodeMsg.PASSWORD_ERROR);
-        }
-
-        if (!jwtUser.isEnabled()) {
-            return ResultBuilder.build(CodeMsg.ACCOUNT_IS_DISABLED);
-        }
-
-        // 生成Token令牌
-        final String token = jwtTokenUtil.generateToken(jwtUser);
-
-        // 返回Token
-        return ResultBuilder.build(new AuthenticationInfo(token, jwtUser));
+    public Result login(@Validated @RequestBody AuthorizationUser authorizationUser, HttpServletResponse response) {
+        log.info("执行用户登录，参数={}", authorizationUser);
+        return ResultBuilder.success(authenticationService.login(authorizationUser, response));
     }
 
     @PostMapping(value = "/register")
     public Result register(@Validated @RequestBody User user) {
-        if (!userService.register(user)) {
-            return ResultBuilder.build(CodeMsg.BAD_REQUEST);
+        if (authenticationService.register(user)) {
+            return ResultBuilder.build(CodeMsg.SUCCESS);
+        } else {
+            throw new GlobalException(CodeMsg.BAD_REQUEST);
         }
-        return ResultBuilder.build(CodeMsg.SUCCESS);
     }
 
     @GetMapping(value = "/info")
     public Result getUserInfo() {
-        UserDetails userDetails = SecurityContextUtil.getUserDetails();
-        JwtUser jwtUser = (JwtUser) userDetailsService.loadUserByUsername(userDetails.getUsername());
-        return ResultBuilder.build(jwtUser);
+        return ResultBuilder.success(authenticationService.getUserInfo());
     }
 }

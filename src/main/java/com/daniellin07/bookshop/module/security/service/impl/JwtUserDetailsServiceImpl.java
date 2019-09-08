@@ -1,6 +1,7 @@
-package com.daniellin07.bookshop.module.security.service;
+package com.daniellin07.bookshop.module.security.service.impl;
 
 import com.daniellin07.bookshop.common.exception.GlobalException;
+import com.daniellin07.bookshop.common.result.CodeMsg;
 import com.daniellin07.bookshop.module.security.domain.JwtUser;
 import com.daniellin07.bookshop.module.system.domain.User;
 import com.daniellin07.bookshop.module.system.service.UserService;
@@ -34,7 +35,7 @@ public class JwtUserDetailsServiceImpl implements UserDetailsService {
         }
 
         if (user == null) {
-            throw new GlobalException("用户登录异常！");
+            throw new GlobalException(CodeMsg.USERNAME_NOT_EXIST);
         } else {
             return create(user);
         }

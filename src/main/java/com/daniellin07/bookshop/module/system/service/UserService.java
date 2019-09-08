@@ -1,5 +1,6 @@
 package com.daniellin07.bookshop.module.system.service;
 
+import com.daniellin07.bookshop.module.security.domain.AuthorizationUser;
 import com.daniellin07.bookshop.module.system.domain.User;
 
 /**
@@ -42,12 +43,6 @@ public interface UserService {
      */
     User findByMobile(String mobile);
 
-    /**
-     * 用户注册
-     *
-     * @param user 用户信息
-     * @return 注册结果，注册成功为true
-     */
-    Boolean register(User user);
+    boolean insert(User user);
 
 }
