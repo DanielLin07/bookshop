@@ -254,7 +254,7 @@
     <properties>
         <file.encoding>UTF-8</file.encoding>
         <spring.version>4.3.18.RELEASE</spring.version>
-        <mysql.version>5.1.29</mysql.version>
+        <mysql.version>8.0.28</mysql.version>
         <servlet.version>3.1.0</servlet.version>
         <aspectj.version>1.8.1</aspectj.version>
         <commons-codec.version>1.9</commons-codec.version>
